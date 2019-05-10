@@ -1,0 +1,40 @@
+
+# Clock
+# This is nominally 20.000 ns, but set smaller to provide
+# more slack as protection from cycle to cycle jitter.
+NET "clk"       LOC = "E12"  | IOSTANDARD = LVCMOS33 | PERIOD = 19.200 ;
+
+NET "LCD_DB<0>"     LOC = "Y13"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+NET "LCD_DB<1>"     LOC = "AB18" | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+NET "LCD_DB<2>"     LOC = "AB17" | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+NET "LCD_DB<3>"     LOC = "AB12" | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+NET "LCD_DB<4>"     LOC = "AA12" | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+NET "LCD_DB<5>"     LOC = "Y16"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+NET "LCD_DB<6>"     LOC = "AB16" | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+NET "LCD_DB<7>"     LOC = "Y15"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+
+NET "LCD_Enable"    LOC = "AB4"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+NET "LCD_RS"    	LOC = "Y14"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+NET "LCD_RW"    	LOC = "W13"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+
+
+# Mechanical Switches (SW)
+NET "SW0"			LOC = "V8"	 | IOSTANDARD = LVCMOS33 ;
+NET "SW1"			LOC = "U10"  | IOSTANDARD = LVCMOS33 ;
+NET "SW2"			LOC = "U8"   | IOSTANDARD = LVCMOS33 ;
+NET "rst"			LOC = "T9"   | IOSTANDARD = LVCMOS33 ;
+
+##############################################################################
+# Serial Port (RS232)
+##############################################################################
+
+NET "Rx_in" 		LOC = "E16"  | IOSTANDARD = LVCMOS33 ;
+NET "Tx_out" 		LOC = "F15"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+
+##############################################################################
+# Discrete Indicators (LED)
+##############################################################################
+
+NET "overrun_err"	LOC = "V20"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+NET "parity_err"	LOC = "Y22"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
+NET "frame_err"		LOC = "W21"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW ;
